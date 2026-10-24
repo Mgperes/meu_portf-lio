@@ -7,11 +7,32 @@
   box-sizing: border-box;
 }
 
+:root {
+  --bg-color: #FAF5EC;
+  --text-color: #3b2f2a;
+  --divider-color: #f1efda;
+  --hover-color: #c2603a;
+  --footer-bgcolor: #6b8f71;
+  --footer-color: #f7f4d5;
+  --p-color: #3b2f2a;
+}
+
 html,
 body {
-  background-color: #f7f4d5;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   min-height: 100%;
   font-family: 'Montserrat', sans-serif;
+}
+
+body.dark-mode {
+  --bg-color: #1e1814;
+  --text-color: #f0e6db;
+  --divider-color: #262525;
+  --hover-color:  #e58a62;
+  --footer-bgcolor: #8fb596;
+  --footer-color: #105666;
+  --p-color: #f0e6db;
 }
 
 #wrapper {
@@ -22,31 +43,26 @@ body {
 
 .menu {
   list-style: none;
-  margin: 25px;
+  margin: 0;
   padding: 0;
+  display: flex;
+  gap: 20px;
 }
-
 
 
 .body-content {
   flex: 1;
   padding: 2rem 25px 5rem;
+  border: 2px solid var(--divider-color);
 }
 
 .texto-introdutorio {
   display: block;
-  color: #105666;
+  color: var(--p-color);
   font-size: 1rem;
   line-height: 1.6;
   max-width: 70ch;
-}
-
-footer {
-  background-color: #105666;
-  color: #f7f4d5;
-  width: 100%;
-  min-height: 40px;
-  padding: 10px 25px;
+  margin-top: 10px;
 }
 
 
@@ -55,24 +71,102 @@ h1 {
     font-weight: 400;
     font-size: 5rem;
     font-style: normal;
-    color: #105666;
+    color: var(--text-color);
 
 }
 
 .divisoria {
   display: inline-block;
-  border-bottom: 2px solid #ebe8cb;
+  border-bottom: 2px solid var(--divider-color);
   padding-bottom: 5px;
   margin-bottom: 5px;
 }
 
 .menu a {
   text-decoration: none;
-  color: #105666;
+  color: var(--text-color);
   font-size: 1.2rem;
   transition: color 0.3s ease; 
 }
 
 .menu a:hover {
-  color: #3a8fa2;
+  color: var(--hover-color);
+}
+
+#themeToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+#themeToggle svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#themeToggle:hover {
+  color: var(--hover-color);
+}
+
+#themeToggle .is-hidden {
+  display: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 25px;
+}
+
+.nome {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 3rem;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+.foto {
+  width: 150px;
+  height: 150px;
+  border: 4px outset var(--hover-color);
+  border-radius: 50%;
+  object-fit: cover;
+  margin-top: 20px;
+}
+
+.allarticles {
+  border: 2px solid var(--divider-color);
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.artigo {
+  margin: 20px 20px 20px 20px;
+}
+
+.botão {
+  display: inline-block;
+  padding: 5px 20px;
+  margin-top: 10px;
+  background-color: var(--hover-color);
+  color: var(--text-color);
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
