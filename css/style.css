@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+*  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #f7f4d5;
+  min-height: 100%;
+}
+
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu {
+  list-style: none;
+  margin: 25px;
+  padding: 0;
+}
+
+.body-content {
+  flex: 1;
+  padding: 2rem 25px 5rem;
+}
+
+.texto-introdutorio {
+  display: block;
+  color: #105666;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 70ch;
+}
+
+footer {
+  background-color: #105666;
+  color: #f7f4d5;
+  width: 100%;
+  min-height: 40px;
+  padding: 10px 25px;
+}
+
+
+.nome {
+    font-family: 'Anton', sans-serif;
+    font-weight: 400;
+    font-size: 5rem;
+    font-style: normal;
+    color: #105666;
+}
