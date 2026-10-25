@@ -59,6 +59,13 @@ body.dark-mode {
   border-radius: 20px;
 }
 
+.body-content2 {
+  border: 2px solid var(--article-bgcolor);
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+}
+
 .menu {
   list-style: none;
   margin: 0;
@@ -69,7 +76,8 @@ body.dark-mode {
 
 .content-artigos {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .artigo {
@@ -108,6 +116,15 @@ h1 {
   border-bottom: 2px solid var(--divider-color);
   padding-bottom: 5px;
   margin-bottom: 5px;
+}
+
+.titulo-notas {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  font-style: normal;
+  color: var(--text-color);
+  margin-bottom: 20px;
 }
 
 .menu a {
@@ -196,6 +213,18 @@ h1 {
   text-decoration: none;
   border-radius: 10px;
   transition: background-color 0.3s ease;
+}
+
+.botão:hover {
+  background-color: var(--text-color);
+  color: var(--hover-color);
+}
+
+.data-artigo {
+  display: block;
+  color: var(--p-color);
+  font-size: 0.7rem;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
